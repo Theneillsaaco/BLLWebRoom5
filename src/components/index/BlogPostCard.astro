@@ -5,7 +5,7 @@ export interface Props {
 const { post } = Astro.props;
 ---
 
-<a href={`/blog/${post.slug}`} class="block bg-white shadow rounded overflow-hidden hover:shadow-lg transition">
+<a href={`/BLLWebRoom5/blog/${post.slug}`} class="block bg-white shadow rounded overflow-hidden hover:shadow-lg transition">
     {post.data.image && <img src={post.data.image} alt={post.data.title} class="w-full h-40 object-cover" />}
     <div class="p-4">
         <h3 class="font-bold text-lg mb-2">{post.data.title}</h3>

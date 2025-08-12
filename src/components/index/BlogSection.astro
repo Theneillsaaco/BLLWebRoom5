@@ -1,8 +1,8 @@
 ﻿---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import BlogPostCard from "./BlogPostCard.astro";
 
-const posts = (await getCollection("blog"))
+const posts: CollectionEntry<"blogs">[] = (await getCollection("blogs"))
     .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
     .slice(0, 4);
 ---
@@ -15,6 +15,6 @@ const posts = (await getCollection("blog"))
         ))}
     </div>
     <div class="text-center mt-8">
-        <a href="/blog" class="text-primary-600 font-semibold">Ver todas las noticias →</a>
+        <a href="/BLLWebRoom5/blog" class="text-primary-600 font-semibold">Ver todas las noticias →</a>
     </div>
 </section>
