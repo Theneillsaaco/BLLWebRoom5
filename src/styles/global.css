@@ -1,2 +1,63 @@
 @import "tailwindcss";
 @config "../../tailwind.config.mjs";
+
+/* Properties */
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+/* Boton */
+.animate-rotate-border {
+    animation: border-rotate 3s linear infinite;
+}
+
+.bg-conic-primary {
+    background: conic-gradient(
+            from var(--border-angle),
+            transparent 40%,
+            #9c7749 50%,
+            transparent 60%
+    );
+}
+
+.bg-conic-secondary {
+    background: conic-gradient(
+            from var(--border-angle),
+            transparent 40%,
+            #bba88a 50%,
+            transparent 60%
+    );
+}
+
+/* Animation*/
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-500 { animation-delay: 0.5s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+.animation-delay-700 { animation-delay: 0.7s; }
+.animation-delay-800 { animation-delay: 0.8s; }
+.animation-delay-900 { animation-delay: 0.9s; }
+.animation-delay-1000 { animation-delay: 1s; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-3000 { animation-delay: 3s; }
+
+/* Loading Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    animation: spin 1s linear infinite;
+}
+
+/* Custom Animations */
+@keyframes border-rotate {
+    to {
+        --border-angle: 360deg;
+    }
+}

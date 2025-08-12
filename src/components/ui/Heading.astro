@@ -1,0 +1,33 @@
+﻿---
+export interface Props {
+    text?: string;
+    textGradient?: string;
+    level?: 1 | 2 | 3;
+    className?: string;
+}
+
+const { text = "", textGradient = "", level = 1, className = "" } = Astro.props;
+const Tag = `h${level}`;
+---
+
+<Tag class:list={[
+    "font=black leading-tight",
+    level === 1 && "text-5xl md:text-7xl",
+    level === 2 && "text-4xl md:text-5xl",
+    level === 3 && "text-2xl md:text-3xl",
+    "text-dark",
+    "tracking-tight",
+    className,
+]}>
+    {text && (
+        <>
+            {text}
+            {textGradient && " "}
+        </>
+    )}
+    {textGradient && (
+        <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            {textGradient}
+        </span>
+    )}
+</Tag>
