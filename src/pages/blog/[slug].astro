@@ -11,17 +11,35 @@ export async function getStaticPaths(){
 }
 
 const { post } = Astro.props;
+
+const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title}>
-    <h1>{post.data.title}</h1>
-    <p><strong>Autor:</strong> {post.data.author}</p>
-    <p><strong>Fecha:</strong> {post.data.title}</p>
-    <img
-        src={post.data.image}
-        alt={post.data.title}
-    />
-    <div>
-        {post.body}
-    </div>
+    <article class="max-w-3xl mx-auto px-6 py-16">
+        <!-- Titulo -->
+        <h1 class="text-4xl font-bold mb-4 text-primary-600">
+            {post.data.title}
+        </h1>
+
+        <!-- Metadatos -->
+        <div class="flex items-center gap-4 text-sm text-gray-500 mb-8">
+            <span>✍ {post.data.author}</span>
+            <span>📅 {post.data.date}</span>
+        </div>
+
+        <!-- Imagen -->
+        {post.data.image && (
+            <img
+                src={post.data.image}
+                alt={post.data.title}
+                class="w-full h-80 object-cover rounded-xl shadow-lg mb-10"
+            />
+        )}
+
+        <!-- Contenido del post -->
+        <div class="prose prose-lg prose-primary max-w-none">
+            <Content />
+        </div>
+    </article>
 </Layout>
