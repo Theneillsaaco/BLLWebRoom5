@@ -18,7 +18,7 @@ const { Content } = await post.render();
 <Layout title={post.data.title}>
     <article class="max-w-3xl mx-auto px-6 py-16">
         <!-- Titulo -->
-        <h1 class="text-4xl font-bold mb-4 text-primary-600">
+        <h1 transition:name={`post-title-${post.slug}`} class="text-4xl font-bold mb-4 text-primary-600">
             {post.data.title}
         </h1>
 
