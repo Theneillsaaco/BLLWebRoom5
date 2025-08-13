@@ -4,19 +4,30 @@ export interface Props {
     textGradient?: string;
     level?: 1 | 2 | 3;
     className?: string;
+    gradientFrom?: string;
+    gradientTo?: string;
+    animate?: boolean;
 }
 
-const { text = "", textGradient = "", level = 1, className = "" } = Astro.props;
+const {
+    text = "",
+    textGradient = "",
+    level = 1,
+    className = "",
+    gradientFrom = "primary-400",
+    gradientTo = "secondary-500",
+    animate = false
+} = Astro.props;
+
 const Tag = `h${level}`;
 ---
 
 <Tag class:list={[
-    "font=black leading-tight",
+    "font=black leading-tight tracking-tight text-dark",
     level === 1 && "text-5xl md:text-7xl",
     level === 2 && "text-4xl md:text-5xl",
     level === 3 && "text-2xl md:text-3xl",
-    "text-dark",
-    "tracking-tight",
+    animate && "animate-fade-in-up",
     className,
 ]}>
     {text && (
@@ -26,8 +37,41 @@ const Tag = `h${level}`;
         </>
     )}
     {textGradient && (
-        <span class="bg-gradient-to-r from-primary-400 to-secondary-500 bg-clip-text text-transparent">
+        <span class:list={[`bg-gradient-to-r from-${gradientFrom} to-${gradientTo} bg-clip-text text-transparent`,
+                animate && "animate-gradient-x"
+        ]}>
             {textGradient}
         </span>
     )}
 </Tag>
+
+<style>
+    /* Animación de entrada */
+    @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in-up {
+        animation: fade-in-up 0.6s ease-out both;
+    }
+
+    /* Animación de gradiente */
+    @keyframes gradient-x {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+    .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradient-x 2s ease infinite alternate;
+    }
+</style>
