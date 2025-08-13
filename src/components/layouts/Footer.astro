@@ -2,9 +2,20 @@
 import { Icon } from "astro-icon/components"
 ---
 
-<footer class="bg-gray-900 text-white py-8 mt-20">
-    <div class="container mx-auto px-6 text-center">
-        <p>© 2025 Programa Comunitario - Todos los derechos reservados</p>
+<footer class="bg-gray-900 text-white py-10 mt-20">
+    <div class="container mx-auto px-6 flex flex-col items-center gap-4">
+        <h6 class="text-lg font-semibold mb-4 relative">
+            Siguenos
+            <div class="absolute bottom-0 left-0 w-8 h-0.5 bg-red-500" />
+        </h6>
+        <div class="flex gap-4">
+            <a href="#" class="w-12 h-12 bg-primary-500/40 rounded-full flex items-center justify-center hover:bg-red-500 transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
+                <Icon name="mdi:instagram" class="w-6 h-6" />
+            </a>
+        </div>
+
+        <p class="text-center mt-4">&copy; {new Date().getFullYear()} Programa Comunitario - Todos los derechos reservados</p>
+
         <p class="text-sm flex items-center">
             Desarrollado con
             <Icon class="w-4 h-4 mx-1 text-red-500" name="generic/Heart" />

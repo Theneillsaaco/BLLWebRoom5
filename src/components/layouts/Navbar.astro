@@ -1,10 +1,19 @@
 ﻿---
-
 ---
-<nav class="fixed w-full top-0 z-50 bg-white shadow-md">
+<nav class="fixed w-full top-0 z-50 backdrop-blur-md shadow-md">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <li><a href="/BLLWebRoom5/" class="hover:text-primary-500">Inicio</a></li>
-        <li><a href="/BLLWebRoom5/blog" class="hover:text-primary-500">Blog</a></li>
-        <li><a href="#contacto" class="hover:text-primary-500">Contacto</a></li>
+        <a href="/BLLWebRoom5/" class="flex items-center gap-2">
+             <img
+                src="../../../public/Logo.png"
+                alt="Logo"
+                class="h-10 w-auto"
+             />
+            <span class="text-lg font-semibold text-gray-800 hover:text-primary-500 transition-colors">UpLearn</span>
+        </a>
+
+        <ul class="flex items-center gap-6 text-gray-700 font-medium">
+            <li><a href="/BLLWebRoom5/blog" class="hover:text-primary-500 transition-colors">Blog</a></li>
+            <li><a href="#contacto" class="hover:text-primary-500 transition-colors">Contacto</a></li>
+        </ul>
     </div>
 </nav>
