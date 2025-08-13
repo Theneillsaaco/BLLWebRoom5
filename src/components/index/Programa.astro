@@ -1,20 +1,41 @@
 ﻿---
 import Heading from "../ui/Heading.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <section class="py-20">
     <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
+        <div class="text-center mb-16">
             <Heading text="Programas" textGradient="Destacados" />
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Iniciativas que impulsan la cultura, la educación y el emprendimiento juvenil.
+            </p>
         </div>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 class="text-xl font-bold mb-4 text-primary-600">Mi Quisqueya Conecta</h3>
-                <p>Utiliza la tecnología para acercar a los jóvenes a su identidad cultural mediante recursos digitales, producciones audiovisuales y aplicaciones educativas.</p>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow group">
+                <div class="flex items-center gap-5 mb-5">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full bg-primary-100 group-hover:bg-primary-200 transition-colors">
+                    <Icon name="mdi:earth" class="w-7 h-7 text-primary-600" />
+                </div>
+                <h3 class="text-2xl font-bold text-primary-700">Mi Quisqueya Conecta</h3>
             </div>
-            <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 class="text-xl font-bold mb-4 text-primary-600">Horizontes Abiertos</h3>
-                <p>Desarrolla competencias emprendedoras y facilita oportunidades académicas a través de talleres y mentorías.</p>
+                <p class="text-gray-600 leading-relaxed">
+                    Utiliza la tecnología para acercar a los jóvenes a su identidad cultural mediante recursos digitales, producciones audiovisuales y aplicaciones educativas.
+                </p>
+            </div>
+
+            <!-- Programa 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow group">
+                <div class="flex items-center gap-5 mb-5">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-full bg-primary-100 group-hover:bg-primary-200 transition-colors">
+                        <Icon name="mdi:lightbulb-on-outline" class="w-7 h-7 text-primary-600" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary-700">Horizontes Abiertos</h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    Desarrolla competencias emprendedoras y facilita oportunidades académicas a través de talleres y mentorías.
+                </p>
             </div>
         </div>
     </div>

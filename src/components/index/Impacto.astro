@@ -1,11 +1,25 @@
-﻿<section class="bg-primary-600 text-white py-20">
-    <div class="container mx-auto px-6 text-center max-w-4xl">
-        <h2 class="text-3xl font-bold mb-6">Una red que conecta y transforma</h2>
-        <p class="text-lg mb-8">
-            Desde clubes locales hasta proyectos internacionales, UpLearn impulsa la colaboración, el liderazgo y el impacto social en cada comunidad.
+﻿---
+import Button from "../ui/Button.astro";
+---
+<section class="relative py-24 bg-gradient-to-br from-primary-600 via-primary-500 to-primary-700 text-white overflow-hidden">
+    <!-- Efecto de círculos decorativos -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute -top-24 -left-24 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative container mx-auto px-6 text-center max-w-3xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+            Una red que <span class="text-accent-300">conecta</span> y <span class="text-accent-300">transforma</span>
+        </h2>
+        <p class="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
+            Desde clubes locales hasta proyectos internacionales, <strong>UpLearn</strong> impulsa la colaboración, el liderazgo y el impacto social en cada comunidad.
         </p>
-        <a href="#contacto" class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold shadow hover:bg-gray-100 transition-colors">
-            Únete a la red
-        </a>
+        <Button
+            text="Unete a la red"
+            link="#contacto"
+            variant="secondary"
+        />
     </div>
 </section>
+

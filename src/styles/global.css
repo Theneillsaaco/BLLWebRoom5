@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @config "../../tailwind.config.mjs";
 
+/* Cuerpo */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
 /* Properties */
 @property --border-angle {
     syntax: "<angle>";
@@ -15,19 +26,19 @@
 
 .bg-conic-primary {
     background: conic-gradient(
-            from var(--border-angle),
-            transparent 40%,
-            #9c7749 50%,
-            transparent 60%
+        from var(--border-angle),
+        transparent 40%,
+        #831843 50%,
+        transparent 60%
     );
 }
 
 .bg-conic-secondary {
     background: conic-gradient(
-            from var(--border-angle),
-            transparent 40%,
-            #bba88a 50%,
-            transparent 60%
+        from var(--border-angle),
+        transparent 40%,
+        #bba88a 50%,
+        transparent 60%
     );
 }
 
