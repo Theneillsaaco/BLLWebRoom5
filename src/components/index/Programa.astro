@@ -1,10 +1,20 @@
 ﻿---
-
+import Heading from "../ui/Heading.astro";
 ---
-<section id="programa" class="py-20 container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Sobre el programa</h2>
-    <p class="max-w-3xl mx-auto text-center text-lg">
-        Nuestro programa busca fortalecer la participación comunitaria y promover el desarrollo cultural
-        en diversas áreas, impulsando iniciativas transformadoras.
-    </p>
+<section class="py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <Heading text="Programas" textGradient="Destacados" />
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-bold mb-4 text-primary-600">Mi Quisqueya Conecta</h3>
+                <p>Utiliza la tecnología para acercar a los jóvenes a su identidad cultural mediante recursos digitales, producciones audiovisuales y aplicaciones educativas.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-bold mb-4 text-primary-600">Horizontes Abiertos</h3>
+                <p>Desarrolla competencias emprendedoras y facilita oportunidades académicas a través de talleres y mentorías.</p>
+            </div>
+        </div>
+    </div>
 </section>
