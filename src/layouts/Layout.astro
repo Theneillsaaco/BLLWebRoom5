@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
-import Footer from "../components/layouts/Footer.astro";
-import Navbar from "../components/layouts/Navbar.astro";
+import Footer from '../components/layouts/Footer.astro';
+import Navbar from '../components/layouts/Navbar.astro';
+import { ClientRouter } from 'astro:transitions';
 
 export interface Props {
     title: string;
@@ -19,6 +20,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/BLLWebRoom5/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
+        <ClientRouter />
 	</head>
 	<body class="bg-white text-gray-900">
         <Navbar />

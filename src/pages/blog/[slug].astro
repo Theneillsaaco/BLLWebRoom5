@@ -31,6 +31,7 @@ const { Content } = await post.render();
         <!-- Imagen -->
         {post.data.image && (
             <img
+                transition:name={`post-image-${post.slug}`}
                 src={post.data.image}
                 alt={post.data.title}
                 class="w-full h-80 object-cover rounded-xl shadow-lg mb-10"

@@ -16,6 +16,7 @@ const posts = await getCollection("blogs");
                 <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
                     {post.data.image && (
                         <img
+                            transition:name={`post-image-${post.slug}`}
                             src={post.data.image}
                             alt={post.data.title}
                             class="h-56 w-full object-cover"
