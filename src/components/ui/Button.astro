@@ -7,7 +7,7 @@ export interface Props {
     link?: string;
     text: string;
     iconName?: string;
-    iconAfterText?: string;
+    iconAfterText?: boolean;
     variant?: ButtonVariant;
     ariaLabel?: string;
     disabled?: boolean;
@@ -58,17 +58,23 @@ const baseClasses = `
 // Variantes especificas los estilos
 const variantClasses = {
     primary: `
-        text-dark
-        bg-dark-100
+        text-white
+        bg-primary-500
         border-transparent
-        hover:bg-dark-100
+        hover:bg-primary-600
         hover:text-white
         px-6 py-3
-        ${animatedBorder ? 'hover:shadow-lg hover:shadow-dark-300/30' : ''};
+        ${animatedBorder ? 'hover:shadow-lg hover:shadow-white-300/30' : ''};
     `,
 
     secondary: `
-        ${animatedBorder ? 'hover:shadow-lg hover:shadow-dark-300/30' : ''};
+        text-white
+        bg-secondary-500
+        border-transparent
+        hover:bg-secondary-600
+        hover:text-white
+        px-6 py-3
+        ${animatedBorder ? 'hover:shadow-lg hover:shadow-white-300/30' : ''};
     `
 };
 

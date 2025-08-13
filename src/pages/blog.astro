@@ -1,3 +1,44 @@
 ﻿---
+import Layout from "../layouts/Layout.astro";
+import Heading from "../components/ui/Heading.astro";
+import Button from  "../components/ui/Button.astro";
+import { getCollection } from "astro:content";
 
+const posts = await getCollection("blogs");
 ---
+
+<Layout title="Blog">
+    <section class="max-w-5xl mx-auto px-6 py-16">
+        <Heading text="Nuestro" textGradient="Blog" level={1} className="mb-8" />
+
+        <div class="grid gap-8 md:grid-cols-2">
+            {posts.map(post => (
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                    {post.data.image && (
+                        <img
+                            src={post.data.image}
+                            alt={post.data.title}
+                            class="h-56 w-full object-cover"
+                        />
+                    )}
+                    <div class="p-6 flex flex-col flex-1">
+                        <h2 class="text-xl font-bold text-primary-600 mb-2">{post.data.title}</h2>
+                        <p class="text-sm text-gray-500 mb-4">
+                            ✍ {post.data.author} — 📅 {post.data.date}
+                        </p>
+                        <p class="text-gray-700 flex-1">{post.data.summary}</p>
+                        <div class="mt-6">
+                            <Button
+                                link={`/BLLWebRoom5/blog/${post.slug}`}
+                                text="Leer mas"
+                                variant="primary"]
+                                iconName="mdi:arrow-right"
+                                iconAfterText={true}
+                            />
+                        </div>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </section>
+</Layout>
