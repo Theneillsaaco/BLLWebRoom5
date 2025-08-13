@@ -3,7 +3,7 @@ title: "Primer Estatuto de UpLearn"
 summary: "El primer estatuto de UpLearn"
 date: 2025-08-13
 author: "Samuel Payano Mendoza"
-image: "../../../BLLWebRoom5/Logo.png"
+image: "../../../BLLWebRoom5/LogoColor.png"
 tags: ["Primer Estatuto de UpLearn", "Comunidad"]
 ---
 
