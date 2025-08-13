@@ -2,15 +2,33 @@
 import Heading from "../ui/Heading.astro";
 ---
 
-<section id="sobre" class="py-20 container mx-auto px-6">
-    <div class="max-w-4xl mx-auto text-center">
-        <div class="mb-6">
-            <Heading text="Sobre" textGradient="UpLearn" level={2} />
+<section id="sobre" class="relative py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <!-- Decoracion -->
+    <div class="absolute -top-20 -left-20 w-72 h-72 bg-primary-500/5 rounded-full blur-3xl" />
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-amber-50/5 rounded-full blur-3xl" />
+
+    <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div class="max-w-xl">
+            <div class="mb-6">
+                <Heading text="Sobre" textGradient="UpLearn" level={2} />
+            </div>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                <strong class="text-primary-600">UpLearn</strong> es un espacio donde la educación formal convive con la formación extracurricular.
+                Funcionamos como una red nacional e internacional de clubes académicos, culturales, sociales, deportivos y tecnológicos.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                No solo enseñamos — también <span class="font-semibold text-secondary">actuamos</span>. Organizamos programas, competencias y proyectos que transforman comunidades,
+                respetando la diversidad y necesidades locales.
+            </p>
         </div>
-        <p class="py-2 text-lg text-gray-700 leading-relaxed">
-            UpLearn es un espacio donde la educación formal convive con la formación extracurricular.
-            Funcionamos como una red nacional e internacional de clubes académicos, culturales, sociales, deportivos y tecnológicos.
-            No solo enseñamos — también actuamos. Organizamos programas, competencias y proyectos que transforman comunidades, respetando la diversidad y necesidades locales.
-        </p>
+
+        <!-- Imagen / Ilustración -->
+        <div class="flex justify-center">
+            <img
+                src="../../../BLLWebRoom5/LogoColor.png"
+                alt="Sobre UpLearn"
+                class="max-w-md w-full drop-shadow-xl rounded-xl hover:scale-105 transition-transform duration-500"
+            />
+        </div>
     </div>
 </section>
