@@ -8,10 +8,10 @@ const { post } = Astro.props;
 <a href={`/BLLWebRoom5/blog/${post.slug}`} class="block bg-white shadow rounded overflow-hidden hover:-translate-y-3 hover:shadow-2xl transition-transform duration-500">
     {post.data.image &&
             <img
-                transition:name={`post-image-${post.slug}`}
-                src={post.data.image}
-                alt={post.data.title}
-                class="w-full h-40 object-cover"
+                    transition:name={`post-image-${post.slug}`}
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-40 object-cover"
             />
     }
     <div class="p-4">
