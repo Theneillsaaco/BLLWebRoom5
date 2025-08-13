@@ -1,37 +1,78 @@
 ﻿---
 import Heading from "../ui/Heading.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<section class="bg-gray-50 py-20">
+<section class="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-20">
     <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-            <Heading text="Nuestra" textGradient="Estrutura" level={2} />
+        <!-- Título -->
+        <div class="text-center mb-16">
+            <Heading text="Nuestra" textGradient="Estructura" level={2} />
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                La base organizativa que impulsa nuestras acciones y garantiza el crecimiento de UpLearn.
+            </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow text-center">
-                <h3 class="font-bold text-xl mb-2">Presidencia</h3>
-                <p>Lidera la institución, garantiza el cumplimiento de metas y representa a UpLearn a nivel nacional e internacional.</p>
+        <!-- Grid -->
+        <div class="grid md:grid-cols-3 gap-10">
+            <!-- Item -->
+            <div class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100
+                  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-tr from-primary-100 to-primary-300 mb-5 mx-auto border-2 border-primary-300/40">
+                    <Icon name="mdi:crown" class="text-primary-800/50 text-4xl" />
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-800">Presidencia</h3>
+                <p class="text-gray-600">Lidera la institución, garantiza el cumplimiento de metas y representa a UpLearn a nivel nacional e internacional.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow text-center">
-                <h3 class="font-bold text-xl mb-2">Coordinación General</h3>
-                <p>Planifica y organiza la logística de eventos, guías y protocolos para los clubes.</p>
+
+            <!-- Item -->
+            <div class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100
+                  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-tr from-secondary-100 to-secondary-300 mb-5 mx-auto border-2 border-secondary-300/40">
+                    <Icon name="mdi:clipboard-text-outline" class="text-secondary-900/80 text-4xl" />
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-800">Coordinación General</h3>
+                <p class="text-gray-600">Planifica y organiza la logística de eventos, guías y protocolos para los clubes.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow text-center">
-                <h3 class="font-bold text-xl mb-2">Finanzas</h3>
-                <p>Gestiona la captación, administración y distribución de fondos con total transparencia.</p>
+
+            <!-- Item -->
+            <div class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100
+                  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-tr from-primary-100 to-primary-300 mb-5 mx-auto border-2 border-primary-300/40">
+                    <Icon name="mdi:currency-usd" class="text-primary-800/50 text-4xl" />
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-800">Finanzas</h3>
+                <p class="text-gray-600">Gestiona la captación, administración y distribución de fondos con total transparencia.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow text-center">
-                <h3 class="font-bold text-xl mb-2">Relaciones Públicas</h3>
-                <p>Maneja redes sociales, alianzas y posicionamiento institucional.</p>
+
+            <!-- Item -->
+            <div class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100
+                  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-tr from-secondary-100 to-secondary-300 mb-5 mx-auto border-2 border-secondary-300/40">
+                    <Icon name="mdi:account-group-outline" class="text-secondary-900/80 text-4xl" />
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-800">Relaciones Públicas</h3>
+                <p class="text-gray-600">Maneja redes sociales, alianzas y posicionamiento institucional.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow text-center">
-                <h3 class="font-bold text-xl mb-2">Voluntariado</h3>
-                <p>Organiza y capacita a los miembros que apoyan en eventos y proyectos.</p>
+
+            <!-- Item -->
+            <div class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100
+                  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-tr from-primary-100 to-primary-300 mb-5 mx-auto border-2 border-primary-300/40">
+                    <Icon name="mdi:hand-heart" class="text-primary-800/50 text-4xl" />
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-800">Voluntariado</h3>
+                <p class="text-gray-600">Organiza y capacita a los miembros que apoyan en eventos y proyectos.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow text-center">
-                <h3 class="font-bold text-xl mb-2">Cultura y Educación</h3>
-                <p>Diseña programas estratégicos que fortalecen la identidad cultural y el aprendizaje.</p>
+
+            <!-- Item -->
+            <div class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100
+                  hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-tr from-secondary-100 to-secondary-300 mb-5 mx-auto border-2 border-secondary-300/40">
+                    <Icon name="mdi:book-open-page-variant" class="text-secondary-900/80 text-4xl" />
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-800">Cultura y Educación</h3>
+                <p class="text-gray-600">Diseña programas estratégicos que fortalecen la identidad cultural y el aprendizaje.</p>
             </div>
         </div>
     </div>
